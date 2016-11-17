@@ -1,7 +1,7 @@
 Linux-0.11
 ==========
 
-The old Linux kernel source ver 0.11 which has been tested under modern Linux,  Mac OSX and Windows.
+The old Linux kernel source ver 0.11 which has been tested under modern Linux and Mac OSX.
 
 ##1. Build on Linux
 
@@ -50,8 +50,3 @@ optional
 ##2.2. hack linux-0.11
 
 	same as section 1.2
-
-
-##3. Build on Windows
-
-	todo...
