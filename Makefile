@@ -1,4 +1,4 @@
-OS = Mac
+OS = Linux
 
 # indicate the Hardware Image file
 HDA_IMG = hdc-0.11.img

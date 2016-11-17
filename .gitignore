@@ -114,3 +114,4 @@ output/
 !/external/patch/*.patch
 /toolchain/
 /Image/
+Image
