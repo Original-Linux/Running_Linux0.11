@@ -13,7 +13,6 @@
 *.o
 *.o.*
 *.a
-*.s
 *.ko
 *.so
 *.so.dbg
@@ -36,84 +35,8 @@ modules.builtin
 #
 # Top-level generic files
 #
-/kernel/tags
-/kernel/TAGS
-/kernel/linux
-/kernel/vmlinux
-/kernel/vmlinuz
-/kernel/System.map
-/kernel/Module.markers
-/kernel/Module.symvers
 
 #
-# Debian directory (make deb-pkg)
+# extend directory
 #
-/debian/
-
-#
-# git files that we don't want to ignore even it they are dot-files
-#
-!.gitignore
-!.mailmap
-
-#
-# Generated include files
-#
-/kernel/include/config
-/kernel/include/generated
-/kernel/arch/*/include/generated
-
-# stgit generated dirs
-patches-*
-
-# quilt's files
-patches
-series
-
-# cscope files
-cscope.*
-ncscope.*
-
-# gnu global files
-GPATH
-GRTAGS
-GSYMS
-GTAGS
-
-*.orig
-*~
-\#*#
-
-#
-# Leavings from module signing
-#
-extra_certificates
-signing_key.priv
-signing_key.x509
-x509.genkey
-
-# lichee ingnore files
-/kernel/skel/
-/kerneloutput/
-bImage
-*.swp
-rootfs.cpio.gz
-/kernel/drivers/arisc/binary/arisc
-/kernel/modules/eurasia_km/eurasiacon/binary2_sunxi_android_release/
-###########################
-# OrangePi SDK ignore
-# basic rootfs
-/external/jessie-base-arm64.tar.gz
-/external/ArchLinuxARM-aarch64-latest.tar.gz
-/external/xenial-base-arm64.tar.gz
-!/external/uboot.bin
-!/external/boot0.bin
-
-# Build file
-output/
-!/external/patch/*.patch
-/toolchain/
-/Image/
-Image
-!hdc-0.11.img
 VersionCode/
