@@ -53,6 +53,7 @@ extern void mem_init(long start, long end);
 extern long rd_init(long mem_start, int length);
 extern long kernel_mktime(struct tm * tm);
 extern long startup_time;
+extern void _sdebug();
 
 /*
  * This is set up by the setup-routine at boot-time

@@ -28,5 +28,3 @@ dep:
 	@(for i in *.c;do $(CPP) -M $$i;done) >> tmp_make
 	@cp tmp_make Makefile
 
-### Dependencies:
-debug.o: debug.c
