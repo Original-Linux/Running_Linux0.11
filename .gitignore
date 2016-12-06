@@ -39,4 +39,5 @@ modules.builtin
 #
 # extend directory
 #
-VersionCode/
+tools/VersionCode/
+tools/DB/
