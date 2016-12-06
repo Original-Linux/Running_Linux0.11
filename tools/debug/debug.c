@@ -4,6 +4,8 @@
 #include <strarg.h>
 #include <string.h>
 
+static char buf[1024];
+
 #define ZEROPAD   0x00000001  /* pad with zero */
 #define SIGN      0x00000010  /* unisgned/signed long */
 #define PLUS      0x00000100  /* show plus */
@@ -69,4 +71,14 @@ void _sdebug(char *buf, const char *fmt, va_list args)
 			}
 		}
 	}
+}
+
+void debug(const char *fmt, ...)
+{
+	va_list args;
+	int i;
+
+	va_start(args, fmt);
+	i=_sdebug(buf, fmt, args);
+	va_end(args);
 }
