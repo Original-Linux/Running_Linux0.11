@@ -41,3 +41,4 @@ modules.builtin
 #
 tools/VersionCode/
 tools/DB/
+tools/bochs/

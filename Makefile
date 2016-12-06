@@ -35,6 +35,9 @@ DRIVERS =kernel/blk_drv/blk_drv.a kernel/chr_drv/chr_drv.a
 MATH	=kernel/math/math.a
 LIBS	=lib/lib.a
 
+# BiscuitOS Debug System
+DEBUG   =tools/debug/debug.o
+
 .c.s:
 	@$(CC) $(CFLAGS) -S -o $*.s $<
 .s.o:
@@ -66,6 +69,7 @@ tools/system:	boot/head.o init/main.o \
 	$(DRIVERS) \
 	$(MATH) \
 	$(LIBS) \
+	$(DEBUG) \
 	-o tools/system 
 	@nm tools/system | grep -v '\(compiled\)\|\(\.o$$\)\|\( [aU] \)\|\(\.\.ng$$\)\|\(LASH[RL]DI\)'| sort > System.map 
 
@@ -89,6 +93,10 @@ fs/fs.o:
 
 lib/lib.a:
 	@make -C lib
+
+# BiscuitOS debug system
+tools/debug/debug.o:
+	@make -C tools/debug
 
 boot/setup: boot/setup.s
 	@make setup -C boot
