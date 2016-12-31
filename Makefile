@@ -36,7 +36,7 @@ MATH	=kernel/math/math.a
 LIBS	=lib/lib.a
 
 # BiscuitOS Debug System
-DEBUG   =tools/debug/debug.o
+#DEBUG   =tools/debug/debug.o
 
 .c.s:
 	@$(CC) $(CFLAGS) -S -o $*.s $<
@@ -95,8 +95,8 @@ lib/lib.a:
 	@make -C lib
 
 # BiscuitOS debug system
-tools/debug/debug.o:
-	@make -C tools/debug
+# tools/debug/debug.o:
+#	@make -C tools/debug
 
 boot/setup: boot/setup.s
 	@make setup -C boot
