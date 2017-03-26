@@ -33,30 +33,36 @@ been tested under modern Linux and Mac OSX.
 ### 1.2. hack linux-0.11
 
 * Build Linux-0.11
+
   ```
-make 
+  make 
   ```
 
 * Boot Linux-0.11 on qemu
+
   ```
-make start
+  make start
   ```
 
 * Debug Linux-0.11 in GDB
 
   On target PC, running target image 
+
   ```
-make debug
+  make debug
   ```
+
   On debug PC, running GDB as follow:
+
   ```
-gdb tools/system
-(gdb)target remote :1234
-(gdb)b main
-(gdb)c
+  gdb tools/system
+  (gdb)target remote :1234
+  (gdb)b main
+  (gdb)c
   ```
 
 * More help
+
   ```
 make help
   ```
