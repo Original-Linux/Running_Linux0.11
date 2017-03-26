@@ -1,52 +1,62 @@
 Linux-0.11
-==========
+----------------------------------------------------------------------
 
-The old Linux kernel source ver 0.11 which has been tested under modern Linux and Mac OSX.
+The legacy Linux kernel source version 0.11 which has 
+been tested under modern Linux and Mac OSX.
 
 ##1. Build on Linux
 
-##1.1. Linux Setup
+### 1.1. Linux Setup
 
-* a linux distribution: debian , ubuntu and mint are recommended
-* some tools: gcc gdb qemu
-* a linux-0.11 hardware image file: hdc-0.11.img, please download it from http://www.oldlinux.org, or http://mirror.lzu.edu.cn/os/oldlinux.org/, ant put it in the root directory.
-* Now, This version already support the Ubuntu 16.04, enjoy it.
+* Setup linux-0.11 dirstribution
 
-##1.2. hack linux-0.11
+  Recommend Ubuntu, Debian, Mint
 
-    $ make help		// get help
-    $ make  		// compile
-    $ make start		// boot it on qemu
-    $ make debug		// debug it via qemu & gdb, you'd start gdb to connect it.
+* Tools
 
-    $ gdb tools/system
-    (gdb) target remote :1234
-    (gdb) b main
-    (gdb) c
+  Needed gcc, qemu, bochs, gdb and etc
 
+* Release hardware image 
 
-##2. Build on Mac OS X
+  A linux-0.11 hardware image file: hdc-0.11.img
 
-##2.1. Mac OS X Setup
+  Please download it from
+  ```
+  http://www.oldlinux.org
+  or
+  http://mirror.lzu.edu.cn/os/oldlinux.org/
+  ```
+* Host PC
 
-* install cross compiler gcc and binutils
-* install qemu
-* install gdb. you need download the gdb source and compile it to use gdb because port doesn't provide i386-elf-gdb, or you can use the pre-compiled gdb in the tools directory.
-* a linux-0.11 hardware image file: hdc-0.11.img
+  Now, this version already support Ubuntu16.04, enjoy it.
 
-#
-    $ sudo port install qemu
-    $ sudo port install i386-elf-binutils i386-elf-gcc
+### 1.2. hack linux-0.11
 
-optional
+* Build Linux-0.11
+  ```
+make 
+  ```
 
-    $ wget ftp://ftp.gnu.org/gnu/gdb/gdb-7.4.tar.bz2
-    $ tar -xzvf gdb-7.4.tar.bz2
-	$ cd gdb-7.4
-	$ ./configure --target=i386-elf
-	$ make
+* Boot Linux-0.11 on qemu
+  ```
+make start
+  ```
 
+* Debug Linux-0.11 in GDB
 
-##2.2. hack linux-0.11
+  On target PC, running target image 
+  ```
+make debug
+  ```
+  On debug PC, running GDB as follow:
+  ```
+gdb tools/system
+(gdb)target remote :1234
+(gdb)b main
+(gdb)c
+  ```
 
-	same as section 1.2
+* More help
+  ```
+make help
+  ```
