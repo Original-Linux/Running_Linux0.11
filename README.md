@@ -64,5 +64,5 @@ been tested under modern Linux and Mac OSX.
 * More help
 
   ```
-make help
+  make help
   ```
