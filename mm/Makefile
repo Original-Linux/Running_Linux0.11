@@ -32,6 +32,5 @@ dep:
 
 ### Dependencies:
 memory.o: memory.c ../include/signal.h ../include/sys/types.h \
-  ../include/asm/system.h ../include/linux/sched.h \
-  ../include/linux/head.h ../include/linux/fs.h ../include/linux/mm.h \
-  ../include/linux/kernel.h
+ ../include/asm/system.h ../include/linux/sched.h ../include/linux/head.h \
+ ../include/linux/fs.h ../include/linux/mm.h ../include/linux/kernel.h
